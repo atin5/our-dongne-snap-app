@@ -142,7 +142,6 @@ if admin_mode:
         st.success("파일에 저장되었습니다.")
 
 # 일반 모드: HTML 테이블로 업체 정보 표시 (일반 모드에서는 '지역' 항목 미표시)
-st.header("업체 목록")
 if companies:
     # 아이콘 URL 설정 (테이블용)
     homepage_icon = "https://cdn-icons-png.freepik.com/256/620/620801.png?ga=GA1.1.1596980588.1740342915"
