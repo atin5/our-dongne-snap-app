@@ -43,8 +43,6 @@ def save_all_companies(companies, file_path):
             ])
             f.write(line + "\n")
 
-st.title("Marry U")
-
 # 관리자 모드 활성화 (패스워드: admin123)
 admin_mode = st.sidebar.checkbox("관리자 모드 활성화")
 if admin_mode:
