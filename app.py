@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-FILE_PATH = "/Users/atin5/Desktop/app/companies.txt"
+FILE_PATH = "companies.txt"  # 절대 경로 대신 상대 경로 사용
 
 def load_companies(file_path):
     companies = []
