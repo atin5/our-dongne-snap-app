@@ -1,7 +1,7 @@
+import streamlit as st
 import os
 
-# 현재 디렉터리를 기준으로 companies.txt 파일을 불러옴
-FILE_PATH = os.path.join(os.path.dirname(__file__), 'companies.txt')
+FILE_PATH = "companies.txt"  # 절대 경로 대신 상대 경로 사용
 
 def load_companies(file_path):
     companies = []
@@ -42,8 +42,6 @@ def save_all_companies(companies, file_path):
                 comp.get("지역", "")
             ])
             f.write(line + "\n")
-
-st.title("우리동네스냅업체")
 
 # 관리자 모드 활성화 (패스워드: admin123)
 admin_mode = st.sidebar.checkbox("관리자 모드 활성화")
@@ -142,7 +140,6 @@ if admin_mode:
         st.success("파일에 저장되었습니다.")
 
 # 일반 모드: HTML 테이블로 업체 정보 표시 (일반 모드에서는 '지역' 항목 미표시)
-st.header("업체 목록")
 if companies:
     # 아이콘 URL 설정 (테이블용)
     homepage_icon = "https://cdn-icons-png.freepik.com/256/620/620801.png?ga=GA1.1.1596980588.1740342915"
